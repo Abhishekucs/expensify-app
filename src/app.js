@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouters from './routers/AppRouters';
+import { startSetExpenses } from '../src/actions/expenses'
 import store from './store/configStore'
 import { Provider } from 'react-redux'
 import 'normalize.css/normalize.css'
@@ -14,5 +15,6 @@ const jsx = (
     </Provider>
 )
 
-
-ReactDOM.render(jsx, document.getElementById('app'))
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'))
+})

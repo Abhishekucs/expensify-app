@@ -37,3 +37,12 @@ test('should not edit expense without id', () => {
     const state = expenseReducer(expenses, { type: 'EDIT_EXPENSE', id: '9', updates: { description: 'WIFI bill' } })
     expect(state).toEqual(expenses)
 })
+
+test('should set expenses', () => {
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses: [expenses[1]]
+    }
+    const state = expenseReducer(expenses, action)
+    expect(state).toEqual([expenses[1]])
+})
