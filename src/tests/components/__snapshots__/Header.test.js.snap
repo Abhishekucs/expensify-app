@@ -8,7 +8,7 @@ exports[`should render Header component 1`] = `
   <NavLink
     activeClassName="is-active"
     exact={true}
-    to="/"
+    to="/Dashboard"
   >
     Dashboard
   </NavLink>
@@ -34,7 +34,7 @@ exports[`should startLogout on button click 1`] = `
   <NavLink
     activeClassName="is-active"
     exact={true}
-    to="/"
+    to="/Dashboard"
   >
     Dashboard
   </NavLink>
